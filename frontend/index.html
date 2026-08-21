@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Domus</title>
+</head>
+<body>
+
+    <div id="blur"></div>
+
+    <div id="menu">
+        <div class="basem">
+            <p>Mensal</p>
+        </div>
+        <div class="basem">
+            <p>Anual</p>
+        </div>
+        <div class="basem">
+            <p>Configurações</p>
+        </div>
+    </div>
+
+    <div id="pai">
+        <select id="selectMes" name="selectMes">
+            <option value="">-- Selecione --</option>
+            <option value="html">Setembro</option>
+            <option value="css">Outubro</option>
+            <option value="javascript">Desçenbroy</option>
+        </select>
+
+        <div id="infosMes">
+            <div id="dadosMes">
+                <table style="width: 100%;" id="tabelaDados">
+                    <thead>
+                        <tr style="border-bottom: 1px solid rgb(146, 146, 146);">
+                            <th style="width: 20%;" onclick="sortTable(0)">Validade</th>
+                            <th style="width: 30%" onclick="sortTable(1)">Tipo</th>
+                            <th style="width: 30%" onclick="sortTable(2)">Descrição</th>
+                            <th style="width: 20%" onclick="sortTable(3)">Valor</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>                
+            </div>
+
+            <div id="grafico">
+
+            </div>
+        </div>
+
+          <div id="opcoes">
+            <div class="base">
+                <p>Total do Mês</p>
+                <h3>Valor</h3>
+            </div>
+            <div class="base">
+                <p>Sobrando no Mês</p>
+                <h3>Valor</h3>
+            </div>
+            <div id="btnAdd" class="base" onclick="abrirPopupAdicionar()">
+                <h1>+</h1>
+            </div>
+          </div>
+    </div>
+
+    <div id="contextMenu" class="context-menu">
+        <ul>
+          <li onclick="editarLinha()">✏️ Editar</li>
+          <li onclick="excluirLinha()">🗑️ Excluir</li>
+        </ul>
+    </div>
+
+    <div id="divAdicionar">
+        <div id="popupAdicionar" class="popup">
+            <button id="fecharPopup" type="button" onclick="fecharPopupAdicionar()">X</button>
+            <h2>Adicionar Despesa</h2>
+            <form id="formAdicionar">
+                <label for="validade">Validade</label>
+                <input type="date" id="validade" name="validade" required><br>
+
+                <label for="tipo">Tipo</label>
+                <select id="tipo" name="tipo" required>
+                    <option value="">-- Selecione --</option>
+                    <option value="Conta">Conta</option>
+                    <option value="Assinatura">Assinatura</option>
+                    <option value="Refeição">Refeição</option>
+                    <option value="Lazer">Lazer</option>
+                    <option value="Mercado">Mercado</option>
+                    <option value="Fatura">Fatura</option>
+                    <option value="Emprestado">Emprestado</option>
+                    <option value="Outro">Outro</option>
+                </select><br>
+
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" name="descricao" required><br>
+
+                <label for="valor">Valor</label>
+                <input type="number" id="valor" name="valor" step="0.01" required><br>
+
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="config.js"></script>
+</body>
+</html>
