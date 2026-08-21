@@ -1,0 +1,30 @@
+Tela de cadastro e login
+
+Tela principal:
+Lista referente ao mês atual (Tabela) *
+Dropdown para selecionar o mês *
+Opção de editar conta e excluir
+Filtros para listagem (Alfabetica, vencimento e valor) *
+Valor total do mês *
+Gráfico do mês *
+Botão adicionar (abrir popup)
+	- Popup:
+		Validade
+		Tipo
+		Descrição
+		Valor
+	  
+	  Botão salvar e cancelar
+
+Tabela: *
+Validade | Tipo | Descrição | Valor
+
+2ª tela:
+Lista de total dos meses
+Gráficos comparativos dos meses
+
+3ª tela (configurações):
+Nome
+Email
+Senha
+Salário Liquido
